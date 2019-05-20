@@ -1,21 +1,13 @@
-import React, {useContext} from 'react';
-import {ViewContext, TODO, DOING, DONE} from "../Store/ViewContext";
+import React from 'react';
 
-const BackButton = () => {
-
-    const viewContext = useContext(ViewContext);
-
+const BackButton = ({props}) => {
     const back = () => {
-        viewContext.dispatch({type: TODO});
+        props.history.push('/todo');
     };
 
     return (
         <>
-            <button className={
-                viewContext.state.currentView !== TODO &&
-                viewContext.state.currentView !== DOING &&
-                viewContext.state.currentView !== DONE ?
-                    "btn btn-outline-secondary" : "invisible"} onClick={back}>back</button>
+            <button className="btn btn-outline-light border-0 form-control" onClick={back}>back</button>
         </>
     );
 };

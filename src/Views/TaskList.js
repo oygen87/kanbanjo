@@ -1,10 +1,11 @@
 import React from 'react';
 import Task from "../Components/Task";
 
-const TaskList = ({list}) => {
+const TaskList = ({props, list}) => {
+    const taskList = list.map(item => <Task props={props} key={item.id} id={item.id} title={item.title} description={item.description} status={item.status} color={item.color}/>);
     return (
         <div>
-            {list.map(item => <Task key={item.id} id={item.id} title={item.title} description={item.description} status={item.status} color={item.color}/>)}
+            {taskList}
         </div>
     );
 };

@@ -1,22 +1,19 @@
 import React, {useContext, useState} from 'react';
-import {removeTask} from "../Auth/FirebaseService";
-import {TODO, EDIT, ViewContext} from "../Store/ViewContext";
+import {EDIT} from "../Store/ViewContext";
 import {TaskContext} from "../Store/TaskContext";
 
-const Task = ({id, title, description, status, color}) => {
-    const viewContext = useContext(ViewContext);
+const Task = ({props, id, title, description, status, color}) => {
     const taskContext = useContext(TaskContext);
 
     const [isExpanded, setExpanded] = useState(false);
 
     const handleEdit = async () => {
-        viewContext.dispatch({type: EDIT});
         taskContext.dispatch({type: EDIT, payload: {id, title, description, status, color}});
+        props.history.push('/edit');
     };
 
     const handleExpand = () => {
         setExpanded(!isExpanded);
-        console.log(isExpanded);
     };
 
     const bgColor = (color) => {
@@ -33,10 +30,10 @@ const Task = ({id, title, description, status, color}) => {
     };
 
     return (
-        <div className={bgColor(color) + " card mt-2 p-2"} id={id} onClick={handleExpand}>
+        <div className={bgColor(color) + " card mt-2 p-2 task"} id={id} onClick={handleExpand}>
             <strong>{title}</strong>
             <p className={isExpanded ? "visible" : "d-none"}>{description}</p>
-            <button className={isExpanded ? "visible btn btn-outline-dark" : "d-none"} onClick={handleEdit}>Edit</button>
+            <button className={isExpanded ? "visible btn btn-outline-light" : "d-none"} onClick={handleEdit}>Edit</button>
         </div>
     );
 };

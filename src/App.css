@@ -1,0 +1,22 @@
+.task p {
+    white-space: pre-wrap;
+}
+body {
+    background-color: #333 !important;
+    color: #EEE !important;
+}
+.btn-warning {
+    background-color: #f39a00 !important;
+    border-color: #f39a00 !important;
+}
+.bg-warning.card {
+    background-color: #f39a00 !important;
+}
+
+.btn-danger {
+    background-color: #e02aa2 !important;
+    border-color: #e02aa2 !important;
+}
+.bg-danger.card {
+    background-color: #e02aa2 !important;
+}

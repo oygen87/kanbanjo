@@ -1,23 +1,23 @@
 import React, {useContext, useState} from 'react';
-import {TODO, DOING, DONE, ViewContext} from "../Store/ViewContext";
-import {updateTask, removeTask} from "../Auth/FirebaseService";
+import {DOING, DONE, TODO, ViewContext} from "../Store/ViewContext";
 import {TaskContext} from "../Store/TaskContext";
+import {removeTask, updateTask} from "../Auth/FirebaseService";
+import BackButton from "../Components/BackButton";
 
-const EditTask = () => {
-    const viewContext = useContext(ViewContext);
+const EditPage = (props) => {
     const taskContext = useContext(TaskContext);
 
     const [state, setState] = useState(taskContext.state.edit);
 
     const saveTask = async () => {
         await updateTask(state);
-        viewContext.dispatch({type: TODO});
+        props.history.push('/todo');
 
     };
 
     const handleRemove = async () => {
         await removeTask(state.id);
-        viewContext.dispatch({type: TODO});
+        props.history.push('/todo');
     };
 
     const handleChangeTitle = (e) => {
@@ -58,14 +58,14 @@ const EditTask = () => {
                 <input className="mb-2 form-control" onChange={handleChangeTitle} type="text" placeholder="title" value={state.title}/>
             </div>
             <div className="form-group">
-                <textarea className="mb-2 form-control" onChange={handleChangeDescription} type="text" placeholder="description" value={state.description}/>
+                <textarea rows="6" className="mb-2 form-control" onChange={handleChangeDescription} type="text" placeholder="description" value={state.description}/>
             </div>
             <div className="form-group">
                 <div className="btn-group mb-2" role="group" aria-label="Basic example">
                     <button type="button" className="btn btn-success" onClick={() => handleChangeColor("green")}>Green</button>
                     <button type="button" className="btn btn-info" onClick={() => handleChangeColor("blue")}>Blue</button>
-                    <button type="button" className="btn btn-warning" onClick={() => handleChangeColor("yellow")}>Yellow</button>
-                    <button type="button" className="btn btn-danger" onClick={() => handleChangeColor("red")}>Red</button>
+                    <button type="button" className="btn btn-warning" onClick={() => handleChangeColor("yellow")}>Orange</button>
+                    <button type="button" className="btn btn-danger" onClick={() => handleChangeColor("red")}>Pink</button>
                 </div>
             </div>
             <div className="form-group">
@@ -76,7 +76,10 @@ const EditTask = () => {
                 </div>
             </div>
             <div className="form-group">
-                <button className="btn btn-light form-control" onClick={handleRemove}>REMOVE</button>
+                <BackButton props={props}/>
+            </div>
+            <div className="form-group">
+                <button className="btn btn-outline-light form-control" onClick={handleRemove}>REMOVE</button>
             </div>
             <div className="form-group">
                 <button className="btn btn-light form-control" onClick={saveTask}>SAVE</button>
@@ -85,4 +88,4 @@ const EditTask = () => {
     );
 };
 
-export default EditTask;
+export default EditPage;

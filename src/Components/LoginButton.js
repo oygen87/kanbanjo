@@ -2,12 +2,13 @@ import React, {useContext} from 'react';
 import {AuthContext, LOGIN} from "../Store/AuthContext";
 import {loginWithGitHub} from "../Auth/FirebaseService";
 
-const LoginButton = () => {
+const LoginButton = ({props}) => {
     const authContext = useContext(AuthContext);
     const login = async () => {
         try {
             const user = await loginWithGitHub();
             authContext.dispatch({type: LOGIN});
+            props.history.push('/todo');
         } catch (error) {
             // TODO : implement error handling
         }

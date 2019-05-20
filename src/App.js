@@ -1,28 +1,36 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import './App.css';
-
 import { BrowserRouter, Route } from "react-router-dom";
-
-// Firebase App (the core Firebase SDK) is always required and must be listed first
-import * as firebase from "firebase/app";
-
-// Add the Firebase products that you want to use
 import "firebase/auth";
 import "firebase/firestore";
 import "firebase/database";
-import {isLoggedIn, loginWithGitHub, logoutFromGitHub} from "./Auth/FirebaseService";
 import LoginPage from "./Pages/LoginPage";
-import KanbanBoard from "./Pages/KanbanBoard";
 import {AuthContext} from "./Store/AuthContext";
+import TodoPage from "./Pages/TodoPage";
+import DoingPage from "./Pages/DoingPage";
+import DonePage from "./Pages/DonePage";
+import EditPage from "./Pages/EditPage";
+import NewPage from "./Pages/NewPage";
+import TopMenu from "./Components/TopMenu";
+import BottomMenu from "./Components/BottomMenu";
 
 const App = () => {
 
     const authContext = useContext(AuthContext);
 
     return (
-        <div id="App">
-            {authContext.state.isLoggedIn ? <KanbanBoard/> : <LoginPage/>}
-        </div>
+        <BrowserRouter>
+            <div className="App">
+                {authContext.state.isLoggedIn ? <TopMenu/> : ""}
+                <Route exact path="/" component={LoginPage} />
+                <Route exact path="/todo" component={TodoPage} />
+                <Route exact path="/doing" component={DoingPage} />
+                <Route exact path="/done" component={DonePage} />
+                <Route exact path="/edit" component={EditPage} />
+                <Route exact path="/new" component={NewPage} />
+                {authContext.state.isLoggedIn ? <BottomMenu/> : ""}
+            </div>
+        </BrowserRouter>
     );
 };
 

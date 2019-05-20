@@ -1,22 +1,27 @@
 import React, {useContext} from 'react';
-import {ViewContext, NEW, TODO, DOING, DONE} from "../Store/ViewContext";
-import LogoutButton from "./LogoutButton";
-import StatusMenu from "./StatusMenu";
+import {NavLink} from "react-router-dom";
+import {AuthContext, LOGOUT} from "../Store/AuthContext";
+import {logoutFromGitHub} from "../Auth/FirebaseService";
 
 const BottomMenu = () => {
 
-    const viewContext = useContext(ViewContext);
+    const authContext = useContext(AuthContext);
 
-    const setViewToNew = () => {
-        viewContext.dispatch({type: NEW});
+    const logout = async () => {
+        try {
+            await logoutFromGitHub();
+            authContext.dispatch({type: LOGOUT});
+        } catch (error) {
+            // TODO : implement error handling
+        }
     };
 
     return (
         <div className="fixed-bottom">
             <nav className="nav nav-pills nav-fill p-2">
-                <a href="#" className="nav-item nav-link btn btn-success" onClick={setViewToNew}>New Task</a>
+                <NavLink to="/" onClick={logout} className="nav-item nav-link nav-item nav-link btn btn-danger">Logout</NavLink>
+                <NavLink to="/new" className="nav-item nav-link nav-item nav-link btn btn-info">New task</NavLink>
             </nav>
-            <StatusMenu/>
         </div>
     );
 };

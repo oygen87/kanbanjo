@@ -33,7 +33,6 @@ export const loginWithGitHub = () => {
         });
         // ...
         return user;
-        return user;
     }).catch((error) => {
         // Handle Errors here.
         var errorCode = error.code;
@@ -55,8 +54,13 @@ export const logoutFromGitHub = () => {
         });
 };
 
-export const readProfile = async () => {
+export const readProfile = async (props) => {
+    if (!isLoggedIn()) {
+            props.history.push('/');
+            return;
+    }
     const uid = firebase.auth().currentUser.uid;
+
     return firebase.database().ref('users/' + uid + "/details")
         .once('value')
         .then(snapshot => {
@@ -64,13 +68,21 @@ export const readProfile = async () => {
         });
 };
 
-export const fetchTasks = async () => {
+export const fetchTasks = async (props) => {
+    if (!isLoggedIn()) {
+        props.history.push('/');
+        return;
+    }
     const uid = firebase.auth().currentUser.uid;
     return firebase.database().ref('users/' + uid + "/tasks")
         .once('value')
         .then(snapshot => {
             return transformTasks(snapshot.val());
         });
+};
+
+export const isLoggedIn = () => {
+    return !!firebase.auth().currentUser;
 };
 
 export const currentUser = () => {

@@ -1,13 +1,11 @@
-import React, {useContext} from 'react';
-import {AuthContext, LOGOUT} from "../Store/AuthContext";
+import React from 'react';
 import {logoutFromGitHub} from "../Auth/FirebaseService";
 
-const LogoutButton = () => {
-    const authContext = useContext(AuthContext);
+const LogoutButton = (props) => {
     const logout = async () => {
         try {
             await logoutFromGitHub();
-            authContext.dispatch({type: LOGOUT});
+            props.history.push('/');
         } catch (error) {
             // TODO : implement error handling
         }

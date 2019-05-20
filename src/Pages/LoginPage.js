@@ -1,12 +1,11 @@
 import React from 'react';
-import {isLoggedIn} from "../Auth/FirebaseService";
 import LoginButton from "../Components/LoginButton";
 
-const LoginPage = () => {
+const LoginPage = (props) => {
 
     return (
         <div id="Login">
-            <LoginButton/>
+            <LoginButton props={props}/>
         </div>
 
     )
