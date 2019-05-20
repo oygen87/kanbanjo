@@ -4,7 +4,7 @@ import LoginButton from "../Components/LoginButton";
 const LoginPage = (props) => {
 
     return (
-        <div id="Login">
+        <div id="login">
             <LoginButton props={props}/>
         </div>
 

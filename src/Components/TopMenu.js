@@ -11,9 +11,9 @@ const TopMenu = () => {
 
     return (
         <div>
-            <nav className="nav nav-pills nav-fill p-2">
+            <nav className="nav nav-pills nav-fill p-2 fixed-top top-menu">
                 <NavLink to="/todo" className="nav-item nav-link">Todo</NavLink>
-                <NavLink to="/doing" className="nav-item nav-link">Doing</NavLink>
+                <NavLink to="/doing" className="nav-item nav-link">In Progress</NavLink>
                 <NavLink to="/done" className="nav-item nav-link">Done</NavLink>
             </nav>
         </div>

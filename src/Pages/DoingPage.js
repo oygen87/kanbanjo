@@ -8,7 +8,7 @@ const DoingPage = (props) => {
     const taskContext = useContext(TaskContext);
 
     const [user, setUser] = useState(null);
-    const [tasks, setTasks] = useState(null);
+    const [tasks, setTasks] = useState(taskContext.state.tasks);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -16,11 +16,11 @@ const DoingPage = (props) => {
                 const user = await readProfile(props);
                 setUser(user);
             }
-
-            const fetchedTasks = await fetchTasks(props);
-            taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
-            setTasks(fetchedTasks);
-            console.log(tasks);
+            if (!tasks) {
+                const fetchedTasks = await fetchTasks(props);
+                taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
+                setTasks(fetchedTasks);
+            }
         };
         fetchData();
     }, []);

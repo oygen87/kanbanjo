@@ -3,20 +3,84 @@
 }
 body {
     background-color: #333 !important;
-    color: #EEE !important;
+    color: #000 !important;
 }
 .btn-warning {
-    background-color: #f39a00 !important;
-    border-color: #f39a00 !important;
+    background-color: #ffe362 !important;
+    border-color: #ffe362 !important;
 }
 .bg-warning.card {
-    background-color: #f39a00 !important;
+    background-color: #ffe362 !important;
 }
-
+.btn-info {
+    background-color: #6bc3ea !important;
+    border-color: #6bc3ea !important;
+}
+.bg-info.card {
+    background-color: #6bc3ea !important;
+}
 .btn-danger {
-    background-color: #e02aa2 !important;
-    border-color: #e02aa2 !important;
+    background-color: #ff65ca !important;
+    border-color: #ff65ca !important;
 }
 .bg-danger.card {
-    background-color: #e02aa2 !important;
+    background-color: #ff65ca !important;
+}
+.btn-success {
+    background-color: #86f9a0 !important;
+    border-color: #86f9a0 !important;
+}
+.btn {
+    color: #000 !important;
+}
+.btn.btn-dark {
+    background-color: #222 !important;
+    border-color: #222 !important;
+    color: #EEE !important;
+}
+.bg-success.card {
+    background-color: #86f9a0 !important;
+}
+
+.nav-link {
+    color: #EEE !important;
+}
+.nav-link.active {
+    background-color: #222 !important;
+}
+#new-task {
+    background-color: #222 !important;
+    border-color: #222 !important;
+}
+.task-list {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+.top-menu {
+    background-color: #333;
+}
+.bottom-menu {
+    background-color: #333;
+}
+.new-task, .edit-task {
+    margin-top: 4rem;
+}
+#login {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.bottom-menu-container {
+    display:flex;
+    justify-content: space-between;
+}
+.logout-button {
+    color: #EEE !important;
+    opacity: 0.2;
+}
+.status-active {
+    background-color: #222 !important;
+    border-color:#222 !important;
+    color: #EEE !important;
 }

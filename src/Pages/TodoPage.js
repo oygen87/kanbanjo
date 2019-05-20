@@ -8,7 +8,7 @@ const TodoPage = (props) => {
     const taskContext = useContext(TaskContext);
 
     const [user, setUser] = useState(null);
-    const [tasks, setTasks] = useState(null);
+    const [tasks, setTasks] = useState(taskContext.state.tasks);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -16,10 +16,11 @@ const TodoPage = (props) => {
                 const user = await readProfile(props);
                 setUser(user);
             }
-
-            const fetchedTasks = await fetchTasks(props);
-            taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
-            setTasks(fetchedTasks);
+            if (!tasks) {
+                const fetchedTasks = await fetchTasks(props);
+                taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
+                setTasks(fetchedTasks);
+            }
         };
         fetchData();
     }, []);

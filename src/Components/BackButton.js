@@ -7,7 +7,7 @@ const BackButton = ({props}) => {
 
     return (
         <>
-            <button className="btn btn-outline-light border-0 form-control" onClick={back}>back</button>
+            <button className="btn btn-outline-dark border-0 form-control" onClick={back}>BACK</button>
         </>
     );
 };

@@ -21,14 +21,14 @@ const App = () => {
     return (
         <BrowserRouter>
             <div className="App">
-                {authContext.state.isLoggedIn ? <TopMenu/> : ""}
+                {authContext.state.isLoggedIn ? <TopMenu /> : ""}
                 <Route exact path="/" component={LoginPage} />
                 <Route exact path="/todo" component={TodoPage} />
                 <Route exact path="/doing" component={DoingPage} />
                 <Route exact path="/done" component={DonePage} />
                 <Route exact path="/edit" component={EditPage} />
                 <Route exact path="/new" component={NewPage} />
-                {authContext.state.isLoggedIn ? <BottomMenu/> : ""}
+                {authContext.state.isLoggedIn ? <BottomMenu /> : ""}
             </div>
         </BrowserRouter>
     );

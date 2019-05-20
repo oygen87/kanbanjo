@@ -1,6 +1,7 @@
 import React, {useContext, useState} from 'react';
 import {EDIT} from "../Store/ViewContext";
 import {TaskContext} from "../Store/TaskContext";
+import Remarkable from "remarkable";
 
 const Task = ({props, id, title, description, status, color}) => {
     const taskContext = useContext(TaskContext);
@@ -14,6 +15,11 @@ const Task = ({props, id, title, description, status, color}) => {
 
     const handleExpand = () => {
         setExpanded(!isExpanded);
+    };
+
+    const getRawMarkup = () => {
+        var md = new Remarkable('full');
+        return { __html: md.render(description) };
     };
 
     const bgColor = (color) => {
@@ -30,10 +36,10 @@ const Task = ({props, id, title, description, status, color}) => {
     };
 
     return (
-        <div className={bgColor(color) + " card mt-2 p-2 task"} id={id} onClick={handleExpand}>
-            <strong>{title}</strong>
-            <p className={isExpanded ? "visible" : "d-none"}>{description}</p>
-            <button className={isExpanded ? "visible btn btn-outline-light" : "d-none"} onClick={handleEdit}>Edit</button>
+        <div className={bgColor(color) + " card mt-2 p-2 task"} id={id}>
+            <strong onClick={handleExpand}>{title}</strong>
+            <p className={isExpanded ? "visible" : "d-none"} dangerouslySetInnerHTML={getRawMarkup()} />
+            <button className={isExpanded ? "visible btn btn-outline-dark" : "d-none"} onClick={handleEdit}>EDIT</button>
         </div>
     );
 };
