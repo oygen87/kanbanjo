@@ -1,8 +1,9 @@
 import React from 'react';
+import {TODO} from "../Store/ViewContext";
 
 const BackButton = ({props}) => {
     const back = () => {
-        props.history.push('/todo');
+        props.history.push({pathname: '/kanban', state: {view: TODO}});
     };
 
     return (

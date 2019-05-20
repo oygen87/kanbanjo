@@ -13,6 +13,7 @@ import EditPage from "./Pages/EditPage";
 import NewPage from "./Pages/NewPage";
 import TopMenu from "./Components/TopMenu";
 import BottomMenu from "./Components/BottomMenu";
+import Kanban from "./Components/Kanban";
 
 const App = () => {
 
@@ -21,14 +22,13 @@ const App = () => {
     return (
         <BrowserRouter>
             <div className="App">
-                {authContext.state.isLoggedIn ? <TopMenu /> : ""}
                 <Route exact path="/" component={LoginPage} />
                 <Route exact path="/todo" component={TodoPage} />
                 <Route exact path="/doing" component={DoingPage} />
                 <Route exact path="/done" component={DonePage} />
                 <Route exact path="/edit" component={EditPage} />
                 <Route exact path="/new" component={NewPage} />
-                {authContext.state.isLoggedIn ? <BottomMenu /> : ""}
+                <Route exact path="/kanban" component={Kanban} />
             </div>
         </BrowserRouter>
     );

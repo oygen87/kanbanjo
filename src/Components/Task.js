@@ -32,6 +32,8 @@ const Task = ({props, id, title, description, status, color}) => {
                 return "bg-warning";
             case "red":
                 return "bg-danger";
+            default:
+                return "";
         }
     };
 

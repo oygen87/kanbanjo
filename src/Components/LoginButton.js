@@ -2,6 +2,7 @@ import React, {useContext, useState} from 'react';
 import {AuthContext, LOGIN} from "../Store/AuthContext";
 import {fetchTasks, loginWithGitHub} from "../Auth/FirebaseService";
 import {TaskContext, UPDATE} from "../Store/TaskContext";
+import {TODO} from "../Store/ViewContext";
 
 const LoginButton = ({props}) => {
     const authContext = useContext(AuthContext);
@@ -16,7 +17,7 @@ const LoginButton = ({props}) => {
             const fetchedTasks = await fetchTasks(props);
             taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
             authContext.dispatch({type: LOGIN});
-            props.history.push('/todo');
+            props.history.push({pathname: '/kanban', state: {view: TODO}});
         } catch (error) {
             setLoading(false);
             // TODO : implement error handling

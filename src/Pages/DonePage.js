@@ -23,7 +23,7 @@ const DonePage = (props) => {
             }
         };
         fetchData();
-    }, []);
+    });
 
     return (
         <div>

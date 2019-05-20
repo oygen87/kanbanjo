@@ -12,7 +12,7 @@ const NewPage = (props) => {
         await createNewTask(state);
         const fetchedTasks = await fetchTasks(props);
         taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
-        props.history.push('/todo');
+        props.history.push({pathname: '/kanban', state: {view: TODO}});
 
     };
 

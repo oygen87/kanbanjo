@@ -2,9 +2,10 @@ import React, {useContext, useEffect, useState} from 'react';
 import {TaskContext, UPDATE} from "../Store/TaskContext";
 import {fetchTasks, readProfile} from "../Auth/FirebaseService";
 import TaskList from "../Views/TaskList";
-import {DOING} from "../Store/ViewContext";
+import TopMenu from "./TopMenu";
+import BottomMenu from "./BottomMenu";
 
-const DoingPage = (props) => {
+const Kanban = (props) => {
     const taskContext = useContext(TaskContext);
 
     const [user, setUser] = useState(null);
@@ -29,11 +30,13 @@ const DoingPage = (props) => {
         <div>
             <div className="container mt-2">
                 <div className="task-list">
-                    {tasks && <TaskList props={props} list={tasks.filter(t => t.status === DOING)}/>}
+                    <TopMenu />
+                    {tasks && <TaskList props={props} list={tasks.filter(t => t.status === props.location.state.view)}/>}
+                    <BottomMenu />
                 </div>
             </div>
         </div>
     );
 };
 
-export default DoingPage;
+export default Kanban;

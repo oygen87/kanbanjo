@@ -13,7 +13,7 @@ const EditPage = (props) => {
         await updateTask(state);
         const fetchedTasks = await fetchTasks(props);
         taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
-        props.history.push('/todo');
+        props.history.push({pathname: '/kanban', state: {view: TODO}});
 
     };
 
@@ -21,7 +21,7 @@ const EditPage = (props) => {
         await removeTask(state.id);
         const fetchedTasks = await fetchTasks(props);
         taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
-        props.history.push('/todo');
+        props.history.push({pathname: '/kanban', state: {view: TODO}});
     };
 
     const handleChangeTitle = (e) => {

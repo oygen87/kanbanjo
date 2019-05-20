@@ -41,12 +41,18 @@ body {
 .bg-success.card {
     background-color: #86f9a0 !important;
 }
-
+.nav-link:active, .nav-link:focus  {
+    outline:none !important;
+    box-shadow: none !important;
+}
 .nav-link {
     color: #EEE !important;
 }
 .nav-link.active {
     background-color: #222 !important;
+}
+.nav-link.active.top-menu-active {
+    background-color: #111 !important;
 }
 #new-task {
     background-color: #222 !important;
@@ -61,9 +67,6 @@ body {
 }
 .bottom-menu {
     background-color: #333;
-}
-.new-task, .edit-task {
-    margin-top: 4rem;
 }
 #login {
     display:flex;

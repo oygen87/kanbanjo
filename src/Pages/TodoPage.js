@@ -23,7 +23,7 @@ const TodoPage = (props) => {
             }
         };
         fetchData();
-    }, []);
+    });
 
     return (
         <div>

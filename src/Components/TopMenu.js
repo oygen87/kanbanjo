@@ -1,20 +1,54 @@
-import React, {useContext} from 'react';
-import {ViewContext} from "../Store/ViewContext";
+import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
+import {DOING, DONE, TODO} from "../Store/ViewContext";
 
-const TopMenu = () => {
-    const viewContext = useContext(ViewContext);
-
-    const setView = (view) => {
-        viewContext.dispatch({type: view});
-    };
+const TopMenu = (props) => {
+/*
+<nav className="nav nav-pills nav-fill p-2 fixed-top top-menu">
+                <NavLink to={{
+                    pathname: '/kanban',
+                    state: {
+                        view: TODO
+                    }
+                }} className="nav-item ">Todo</NavLink>
+                <NavLink to={{
+                    pathname: '/kanban',
+                    state: {
+                        view: DOING
+                    }
+                }} className="btn btn-dark">In Progress</NavLink>
+                <NavLink to={{
+                    pathname: '/kanban',
+                    state: {
+                        view: DONE
+                    }
+                }} className="nav-link">Done</NavLink>
+            </nav>
+ */
+    const [isActive, setActive] = useState(TODO);
 
     return (
         <div>
+
             <nav className="nav nav-pills nav-fill p-2 fixed-top top-menu">
-                <NavLink to="/todo" className="nav-item nav-link">Todo</NavLink>
-                <NavLink to="/doing" className="nav-item nav-link">In Progress</NavLink>
-                <NavLink to="/done" className="nav-item nav-link">Done</NavLink>
+                <NavLink onClick={()=>setActive(TODO)} to={{
+                    pathname: '/kanban',
+                    state: {
+                        view: TODO
+                    }
+                }} className={isActive===TODO ? "nav-item nav-link top-menu-active" : "nav-item nav-link"}>Todo</NavLink>
+                <NavLink onClick={()=>setActive(DOING)} to={{
+                    pathname: '/kanban',
+                    state: {
+                        view: DOING
+                    }
+                }} className={isActive===DOING ? "nav-item nav-link top-menu-active" : "nav-item nav-link"}>In Progress</NavLink>
+                <NavLink onClick={()=>setActive(DONE)} to={{
+                    pathname: '/kanban',
+                    state: {
+                        view: DONE
+                    }
+                }} className={isActive===DONE ? "nav-item nav-link top-menu-active" : "nav-item nav-link"}>Done</NavLink>
             </nav>
         </div>
     );
