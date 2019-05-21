@@ -78,7 +78,7 @@ const Task = ({props, id, title, description, status, color}) => {
     };
 
     const taskClassName = () => {
-        let className = bgColor(color) + " card mt-2 p-2 task ";
+        let className = bgColor(color) + " card mt-2 p-3 task ";
         if (hasSwipedLeft) {
             className += " animated fadeOutLeftBig";
         }
