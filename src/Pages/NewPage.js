@@ -3,6 +3,7 @@ import {TODO} from "../Store/ViewContext";
 import {createNewTask, fetchTasks} from "../Auth/FirebaseService";
 import BackButton from "../Components/BackButton";
 import {TaskContext, UPDATE} from "../Store/TaskContext";
+import {bgColor} from "../Util/Util";
 
 const NewPage = (props) => {
     const taskContext = useContext(TaskContext);
@@ -26,22 +27,6 @@ const NewPage = (props) => {
 
     const handleChangeColor = (color) => {
         setState({...state, color});
-    };
-
-    //todo duplicate
-    const bgColor = () => {
-        switch (state.color) {
-            case "green":
-                return "bg-success";
-            case "blue":
-                return "bg-info";
-            case "yellow":
-                return "bg-warning";
-            case "red":
-                return "bg-danger";
-            default:
-                return "";
-        }
     };
 
     return (

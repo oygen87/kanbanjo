@@ -16,14 +16,19 @@ const viewReducer = (state, action) => {
     switch (action.type) {
         case TODO:
             return { ...state, currentView: TODO };
+            break;
         case DOING:
             return { ...state, currentView: DOING};
+            break;
         case DONE:
-        return { ...state, currentView: DONE};
+            return { ...state, currentView: DONE};
+            break;
         case NEW:
             return { ...state, currentView: NEW};
+            break;
         case EDIT:
             return { ...state, currentView: EDIT};
+            break;
         default:
             return state;
     }

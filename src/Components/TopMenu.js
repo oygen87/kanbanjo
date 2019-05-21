@@ -2,29 +2,8 @@ import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
 import {DOING, DONE, TODO} from "../Store/ViewContext";
 
-const TopMenu = (props) => {
-/*
-<nav className="nav nav-pills nav-fill p-2 fixed-top top-menu">
-                <NavLink to={{
-                    pathname: '/kanban',
-                    state: {
-                        view: TODO
-                    }
-                }} className="nav-item ">Todo</NavLink>
-                <NavLink to={{
-                    pathname: '/kanban',
-                    state: {
-                        view: DOING
-                    }
-                }} className="btn btn-dark">In Progress</NavLink>
-                <NavLink to={{
-                    pathname: '/kanban',
-                    state: {
-                        view: DONE
-                    }
-                }} className="nav-link">Done</NavLink>
-            </nav>
- */
+const TopMenu = () => {
+
     const [isActive, setActive] = useState(TODO);
 
     return (

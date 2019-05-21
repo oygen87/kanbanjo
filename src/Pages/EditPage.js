@@ -3,6 +3,7 @@ import {DOING, DONE, TODO} from "../Store/ViewContext";
 import {TaskContext, UPDATE} from "../Store/TaskContext";
 import {fetchTasks, removeTask, updateTask} from "../Auth/FirebaseService";
 import BackButton from "../Components/BackButton";
+import {bgColor} from "../Util/Util";
 
 const EditPage = (props) => {
     const taskContext = useContext(TaskContext);
@@ -38,22 +39,6 @@ const EditPage = (props) => {
 
     const handleChangeStatus = (status) => {
         setState({...state, status});
-    };
-
-//todo duplicate
-    const bgColor = (color) => {
-        switch (color) {
-            case "green":
-                return "bg-success";
-            case "blue":
-                return "bg-info";
-            case "yellow":
-                return "bg-warning";
-            case "red":
-                return "bg-danger";
-            default:
-                return "";
-        }
     };
 
     return (

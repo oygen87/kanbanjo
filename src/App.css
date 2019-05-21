@@ -6,25 +6,25 @@ body {
     color: #000 !important;
 }
 .btn-warning {
-    background-color: #ffe362 !important;
-    border-color: #ffe362 !important;
+    background-color: #ffe87d !important;
+    border-color: #ffe87d !important;
 }
 .bg-warning.card {
-    background-color: #ffe362 !important;
+    background-color: #ffe87d !important;
 }
 .btn-info {
-    background-color: #6bc3ea !important;
-    border-color: #6bc3ea !important;
+    background-color: #97dfff !important;
+    border-color: #97dfff !important;
 }
 .bg-info.card {
-    background-color: #6bc3ea !important;
+    background-color: #97dfff !important;
 }
 .btn-danger {
-    background-color: #ff65ca !important;
-    border-color: #ff65ca !important;
+    background-color: #ff8fd8 !important;
+    border-color: #ff8fd8 !important;
 }
 .bg-danger.card {
-    background-color: #ff65ca !important;
+    background-color: #ff8fd8 !important;
 }
 .btn-success {
     background-color: #86f9a0 !important;
@@ -52,7 +52,9 @@ body {
     background-color: #222 !important;
 }
 .nav-link.active.top-menu-active {
-    background-color: #111 !important;
+    background-color: #EEE !important;
+    color: #333 !important;
+    font-weight: bold !important;
 }
 #new-task {
     background-color: #222 !important;
@@ -69,10 +71,17 @@ body {
     background-color: #333;
 }
 #login {
-    display:flex;
-    justify-content: center;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    height:100vh;
+    height: 100vh;
+    color: #86f9a0;
+    font-weight: bolder;
+    flex-direction: column;
+}
+#kanbanjo-title {
+    font-weight: bold;
+    font-size: 3rem;
 }
 .bottom-menu-container {
     display:flex;
@@ -86,4 +95,7 @@ body {
     background-color: #222 !important;
     border-color:#222 !important;
     color: #EEE !important;
+}
+input[type="text"] {
+    font-weight: bold !important;
 }

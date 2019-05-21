@@ -9,7 +9,8 @@ const Kanban = (props) => {
     const taskContext = useContext(TaskContext);
 
     const [user, setUser] = useState(null);
-    const [tasks, setTasks] = useState(taskContext.state.tasks);
+
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -17,10 +18,9 @@ const Kanban = (props) => {
                 const user = await readProfile(props);
                 setUser(user);
             }
-            if (!tasks) {
+            if (!taskContext.state.tasks) {
                 const fetchedTasks = await fetchTasks(props);
                 taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
-                setTasks(fetchedTasks);
             }
         };
         fetchData();
@@ -31,7 +31,7 @@ const Kanban = (props) => {
             <div className="container mt-2">
                 <div className="task-list">
                     <TopMenu />
-                    {tasks && <TaskList props={props} list={tasks.filter(t => t.status === props.location.state.view)}/>}
+                    {taskContext.state.tasks && <TaskList props={props} list={taskContext.state.tasks.filter(t => t.status === props.location.state.view)}/>}
                     <BottomMenu />
                 </div>
             </div>

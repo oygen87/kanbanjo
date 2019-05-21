@@ -11,8 +11,10 @@ const taskReducer = (state, action) => {
     switch (action.type) {
         case UPDATE:
             return { ...state, tasks: action.payload};
+            break;
         case EDIT:
             return { ...state, edit: action.payload};
+            break;
         default:
             return state;
     }

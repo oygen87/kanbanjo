@@ -16,8 +16,9 @@ var provider = new firebase.auth.GithubAuthProvider();
 provider.addScope('repo');
 
 export const loginWithGitHub = () => {
-    return firebase.auth().signInWithPopup(provider).then((result) => {
+    firebase.auth().signInWithPopup(provider).then((result) => {
         // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+        console.log(result);
         var token = result.credential.accessToken;
         // The signed-in user info.
         var user = result.user;
@@ -43,12 +44,73 @@ export const loginWithGitHub = () => {
         var credential = error.credential;
         // ...
     });
+
+   /*
+    return firebase.auth().getRedirectResult().then((result) => {
+        // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+        console.log(result);
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        //console.log(token);
+        //console.log(user);
+
+        const uid = firebase.auth().currentUser.uid;
+        var detailsRef = firebase.database().ref("users/" + uid + "/details");
+        detailsRef.set({
+            photo: user.photoURL,
+            email: user.email,
+            name: user.displayName
+        });
+        // ...
+        return user;
+    }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+    });*/
 };
+
+export const loginWithRedirect = () => {
+    return firebase.auth().getRedirectResult().then((result) => {
+        // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+        //console.log(result);
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        //console.log(token);
+        //console.log(user);
+
+        const uid = firebase.auth().currentUser.uid;
+        var detailsRef = firebase.database().ref("users/" + uid + "/details");
+        detailsRef.set({
+            photo: user.photoURL,
+            email: user.email,
+            name: user.displayName
+        });
+        // ...
+        return user;
+    }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+    });
+}
 
 export const logoutFromGitHub = () => {
     return firebase.auth().signOut()
         .then(() => {
-            console.log('Signout Succesfull')
+            console.log('Signout Succesful')
         }).catch((error) => {
             console.log('Signout Failed' + error)
         });
