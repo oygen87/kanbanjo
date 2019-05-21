@@ -38,6 +38,11 @@ body {
     border-color: #222 !important;
     color: #EEE !important;
 }
+.btn-outline-dark:hover {
+    background-color: #111 !important;
+    color: white !important;
+    opacity: 0.5 !important;
+}
 .bg-success.card {
     background-color: #86f9a0 !important;
 }
