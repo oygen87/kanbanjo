@@ -4,9 +4,11 @@ import {fetchTasks, readProfile} from "../Auth/FirebaseService";
 import TaskList from "../Views/TaskList";
 import TopMenu from "./TopMenu";
 import BottomMenu from "./BottomMenu";
+import {AuthContext, LOGIN} from "../Store/AuthContext";
 
 const Kanban = (props) => {
     const taskContext = useContext(TaskContext);
+    const authContext = useContext(AuthContext);
 
     const [user, setUser] = useState(null);
 
@@ -15,16 +17,24 @@ const Kanban = (props) => {
     useEffect(() => {
         const fetchData = async () => {
             if (!user) {
+                //console.log("reading profile");
                 const user = await readProfile(props);
+                authContext.dispatch({type: LOGIN});
                 setUser(user);
-            }
-            if (!taskContext.state.tasks) {
                 const fetchedTasks = await fetchTasks(props);
+                //console.log(fetchedTasks);
                 taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
             }
+            /*console.log(taskContext.state);
+            if (taskContext.state.tasks.length == 0) {
+                console.log("fetching tasks");
+                const fetchedTasks = await fetchTasks(props);
+                console.log(fetchedTasks);
+                taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
+            }*/
         };
         fetchData();
-    });
+    },[]);
 
     return (
         <div>
@@ -32,7 +42,7 @@ const Kanban = (props) => {
                 <div className="task-list">
                     <TopMenu />
                     {taskContext.state.tasks && <TaskList props={props} list={taskContext.state.tasks.filter(t => t.status === props.location.state.view)}/>}
-                    <BottomMenu />
+                    <BottomMenu props={props}/>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {AuthContext, LOGIN} from "../Store/AuthContext";
-import {fetchTasks, loginWithGitHub} from "../Auth/FirebaseService";
+import {fetchTasks, loginWithGitHub, loginWithRedirect} from "../Auth/FirebaseService";
 import {TaskContext, UPDATE} from "../Store/TaskContext";
 import {TODO} from "../Store/ViewContext";
 
@@ -13,7 +13,7 @@ const LoginButton = ({props}) => {
     const login = async () => {
         try {
             setLoading(true);
-            await loginWithGitHub();
+            await loginWithRedirect();
             const fetchedTasks = await fetchTasks(props);
             taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
             authContext.dispatch({type: LOGIN});

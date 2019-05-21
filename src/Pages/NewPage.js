@@ -30,7 +30,7 @@ const NewPage = (props) => {
     };
 
     return (
-        <div className={bgColor() + " card p-2 new-task"}>
+        <div className={bgColor(state.color) + " card p-2 new-task"}>
             <div className="form-group">
                 <input className="mb-2 form-control" onChange={handleChangeTitle} type="text" placeholder="title"/>
             </div>
