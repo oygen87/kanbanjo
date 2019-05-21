@@ -29,7 +29,7 @@ const Task = ({props, id, title, description, status, color}) => {
 
     const handleSwipeLeft = async (data) => {
 
-        if (data.absX < 100) {
+        if (data.absX < 70) {
             return;
         }
 
@@ -54,7 +54,7 @@ const Task = ({props, id, title, description, status, color}) => {
 
     const handleSwipeRight = async (data) => {
 
-        if (data.absX < 100) {
+        if (data.absX < 70) {
             return;
         }
 
