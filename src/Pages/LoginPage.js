@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import LoginButton from "../Components/LoginButton";
 import {
     currentUser,
@@ -14,6 +14,7 @@ import {AuthContext, LOGOUT} from "../Store/AuthContext";
 
 const LoginPage = (props) => {
     const authContext = useContext(AuthContext);
+    const [isWaiting, setWaiting] = useState(true);
     /*
     const successful = loginWithRedirect();
     if (successful) {
@@ -67,15 +68,20 @@ const LoginPage = (props) => {
         }
     }*/
 
-
+    setTimeout(() => {
+        setWaiting(false);
+    }, 3000);
 
 
 
     return (
         <div id="login">
-            {/*<button onClick={logUser}>  loguser </button>*/}
             <h1 id="kanbanjo-title">KANBANJO.</h1>
-            <LoginButton props={props}/>
+            {isWaiting ?
+                (<div className="spinner-border" role="status">
+                    <span className="sr-only">Loading...</span>
+                </div>)
+                : <LoginButton props={props}/> }
         </div>
 
     )

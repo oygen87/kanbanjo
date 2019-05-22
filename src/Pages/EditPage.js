@@ -11,7 +11,11 @@ const EditPage = (props) => {
     const [state, setState] = useState(taskContext.state.edit);
 
     const saveTask = async () => {
-        await updateTask(state);
+        if (!state.description) {
+            await updateTask({...state, description : ""});
+        } else {
+            await updateTask(state);
+        }
         const fetchedTasks = await fetchTasks(props);
         taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
         props.history.push({pathname: '/kanban', state: {view: TODO}});
