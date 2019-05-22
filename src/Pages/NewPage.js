@@ -7,9 +7,14 @@ import {bgColor} from "../Util/Util";
 
 const NewPage = (props) => {
     const taskContext = useContext(TaskContext);
+    const [isValid, setValid] = useState(true);
 
     const [state, setState] = useState({title: null, description: null, status: TODO, color:"green"});
     const createTask = async () => {
+        if (!state.title || !state.description) {
+            setValid(false);
+            return;
+        }
         await createNewTask(state);
         const fetchedTasks = await fetchTasks(props);
         taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
@@ -49,9 +54,10 @@ const NewPage = (props) => {
             <div className="form-group">
                 <BackButton props={props}/>
             </div>
-            <div className="form-group">
+            <div className={isValid ? "form-group" : "form-group animated shake"}>
                 <button className="btn btn-light form-control" onClick={createTask}>CREATE</button>
             </div>
+            {!isValid && <p className="text-center">Title or description is empty</p> }
         </div>
     );
 };

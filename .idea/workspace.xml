@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="340853b4-e068-4acb-85c9-35eaf346a8ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pwacompat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/EditPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/EditPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/NewPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/NewPage.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,7 +54,7 @@
         <counts>
           <entry key="css" value="1428" />
           <entry key="html" value="15" />
-          <entry key="js" value="19204" />
+          <entry key="js" value="19612" />
           <entry key="json" value="68" />
         </counts>
       </usages-collector>
@@ -65,7 +63,7 @@
           <entry key="CSS" value="1428" />
           <entry key="HTML" value="15" />
           <entry key="JSON" value="68" />
-          <entry key="JavaScript" value="19204" />
+          <entry key="JavaScript" value="19612" />
         </counts>
       </usages-collector>
     </session>
@@ -87,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Pages/NewPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+            <state relative-caret-position="356">
+              <caret line="59" column="12" lean-forward="true" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -150,7 +148,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Pages/LoginPage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="394">
@@ -162,11 +160,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Pages/EditPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+            <state relative-caret-position="375">
+              <caret line="96" column="87" selection-start-line="96" selection-start-column="87" selection-end-line="96" selection-end-column="87" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -185,7 +183,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>btn-group</find>
       <find>orange</find>
       <find>console</find>
       <find>consol</find>
@@ -215,6 +212,7 @@
       <find>appname</find>
       <find>.standalone</find>
       <find>title</find>
+      <find>usestate</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Eugen\IdeaProjects\google-login-app</dir>
@@ -254,13 +252,13 @@
         <option value="$PROJECT_DIR$/src/Components/LogoutButton.js" />
         <option value="$PROJECT_DIR$/src/Auth/FirebaseService.js" />
         <option value="$PROJECT_DIR$/src/Components/Kanban.js" />
-        <option value="$PROJECT_DIR$/src/Pages/NewPage.js" />
         <option value="$PROJECT_DIR$/public/manifest.json" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/Components/Task.js" />
         <option value="$PROJECT_DIR$/pwacompat.js" />
-        <option value="$PROJECT_DIR$/src/Pages/EditPage.js" />
         <option value="$PROJECT_DIR$/src/Pages/LoginPage.js" />
+        <option value="$PROJECT_DIR$/src/Pages/NewPage.js" />
+        <option value="$PROJECT_DIR$/src/Pages/EditPage.js" />
       </list>
     </option>
   </component>
@@ -356,7 +354,7 @@
     <property name="SearchEverywhereHistoryKey" value="login&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/LoginPage.js&#10;edit&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/EditPage.js&#10;task.js&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/Task.js&#10;newpage&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/NewPage.js&#10;loginp&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/LoginPage.js&#10;taskli&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Views/TaskList.js&#10;loginpa&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/LoginPage.js&#10;newpa&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/NewPage.js&#10;index.j&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/index.js&#10;index.htm&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/public/index.html&#10;css&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/App.css&#10;topmen&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/TopMenu.js&#10;new&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/NewPage.js&#10;bottom&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/BottomMenu.js&#10;logout&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/LogoutButton.js&#10;manif&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/public/manifest.json&#10;index.js&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/index.js&#10;task&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/Task.js&#10;doing&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/DoingPage.js&#10;donepage&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/DonePage.js&#10;back&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/BackButton.js&#10;index.ht&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/public/index.html&#10;newt&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Views/NewTask.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558559832069" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558561223562" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="C:\Users\Eugen\IdeaProjects\google-login-app\node_modules\eslint" />
@@ -401,7 +399,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81070000" />
+    <option name="totallyTimeSpent" value="82497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -631,13 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pages/NewPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
@@ -679,22 +670,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pages/EditPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Pages/LoginPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pages/NewPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="59" column="12" lean-forward="true" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pages/EditPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="96" column="87" selection-start-line="96" selection-start-column="87" selection-end-line="96" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>

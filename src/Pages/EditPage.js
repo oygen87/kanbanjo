@@ -9,17 +9,18 @@ const EditPage = (props) => {
     const taskContext = useContext(TaskContext);
 
     const [state, setState] = useState(taskContext.state.edit);
+    const [isValid, setValid] = useState(true);
 
     const saveTask = async () => {
-        if (!state.description) {
-            await updateTask({...state, description : ""});
+        if (!state.title || !state.description) {
+            setValid(false);
+            return;
         } else {
             await updateTask(state);
+            const fetchedTasks = await fetchTasks(props);
+            taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
+            props.history.push({pathname: '/kanban', state: {view: TODO}});
         }
-        const fetchedTasks = await fetchTasks(props);
-        taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
-        props.history.push({pathname: '/kanban', state: {view: TODO}});
-
     };
 
     const handleRemove = async () => {
@@ -30,11 +31,11 @@ const EditPage = (props) => {
     };
 
     const handleChangeTitle = (e) => {
-        setState({...state, title : e.target.value});
+        setState({...state, title: e.target.value});
     };
 
     const handleChangeDescription = (e) => {
-        setState({...state, description : e.target.value});
+        setState({...state, description: e.target.value});
     };
 
     const handleChangeColor = (color) => {
@@ -48,24 +49,40 @@ const EditPage = (props) => {
     return (
         <div className={bgColor(state.color) + " card p-2 edit-task"}>
             <div className="form-group">
-                <input className="mb-2 form-control" onChange={handleChangeTitle} type="text" placeholder="title" value={state.title}/>
+                <input className="mb-2 form-control" onChange={handleChangeTitle} type="text" placeholder="title"
+                       value={state.title}/>
             </div>
             <div className="form-group">
-                <textarea rows="6" className="mb-2 form-control" onChange={handleChangeDescription} type="text" placeholder="description" value={state.description}/>
+                <textarea rows="6" className="mb-2 form-control" onChange={handleChangeDescription} type="text"
+                          placeholder="description" value={state.description}/>
             </div>
             <div className="form-group">
                 <div className="btn-group mb-2 w-100" role="group" aria-label="Basic example">
-                    <button type="button" className="btn btn-success" onClick={() => handleChangeColor("green")}>Green</button>
-                    <button type="button" className="btn btn-info" onClick={() => handleChangeColor("blue")}>Blue</button>
-                    <button type="button" className="btn btn-warning" onClick={() => handleChangeColor("yellow")}>Yellow</button>
-                    <button type="button" className="btn btn-danger" onClick={() => handleChangeColor("red")}>Pink</button>
+                    <button type="button" className="btn btn-success" onClick={() => handleChangeColor("green")}>Green
+                    </button>
+                    <button type="button" className="btn btn-info" onClick={() => handleChangeColor("blue")}>Blue
+                    </button>
+                    <button type="button" className="btn btn-warning"
+                            onClick={() => handleChangeColor("yellow")}>Yellow
+                    </button>
+                    <button type="button" className="btn btn-danger" onClick={() => handleChangeColor("red")}>Pink
+                    </button>
                 </div>
             </div>
             <div className="form-group">
                 <div className="btn-group mb-2 w-100" role="group" aria-label="Basic example">
-                    <button type="button" className={state.status === TODO ? "btn btn-light status-active" : "btn btn-light"} onClick={() => handleChangeStatus(TODO)}>Todo</button>
-                    <button type="button" className={state.status === DOING ? "btn btn-light status-active" : "btn btn-light"} onClick={() => handleChangeStatus(DOING)}>In Progress</button>
-                    <button type="button" className={state.status === DONE ? "btn btn-light status-active" : "btn btn-light"} onClick={() => handleChangeStatus(DONE)}>Done</button>
+                    <button type="button"
+                            className={state.status === TODO ? "btn btn-light status-active" : "btn btn-light"}
+                            onClick={() => handleChangeStatus(TODO)}>Todo
+                    </button>
+                    <button type="button"
+                            className={state.status === DOING ? "btn btn-light status-active" : "btn btn-light"}
+                            onClick={() => handleChangeStatus(DOING)}>In Progress
+                    </button>
+                    <button type="button"
+                            className={state.status === DONE ? "btn btn-light status-active" : "btn btn-light"}
+                            onClick={() => handleChangeStatus(DONE)}>Done
+                    </button>
                 </div>
             </div>
             <div className="form-group">
@@ -74,9 +91,10 @@ const EditPage = (props) => {
             <div className="form-group">
                 <button className="btn btn-outline-dark form-control" onClick={handleRemove}>REMOVE</button>
             </div>
-            <div className="form-group">
+            <div className={isValid ? "form-group" : "form-group animated shake"}>
                 <button className="btn btn-dark form-control" onClick={saveTask}>SAVE</button>
             </div>
+            {!isValid && <p className="text-center">Title or description is empty</p> }
         </div>
     );
 };
