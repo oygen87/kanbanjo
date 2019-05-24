@@ -22,7 +22,7 @@ const Kanban = (props) => {
                 authContext.dispatch({type: LOGIN});
                 setUser(user);
                 const fetchedTasks = await fetchTasks(props);
-                //console.log(fetchedTasks);
+                if (!fetchedTasks) {return;}
                 taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
             }
             /*console.log(taskContext.state);

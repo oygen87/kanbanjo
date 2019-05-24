@@ -28,7 +28,9 @@ const Task = ({props, task}) => {
     };
 
     const handleSwipeLeft = async (data) => {
-
+        if (isExpanded) {
+            return;
+        }
         if (data.absX < 70) {
             return;
         }
@@ -53,7 +55,9 @@ const Task = ({props, task}) => {
     };
 
     const handleSwipeRight = async (data) => {
-
+        if (isExpanded) {
+            return;
+        }
         if (data.absX < 70) {
             return;
         }
@@ -79,37 +83,44 @@ const Task = ({props, task}) => {
 
     const handleSwipeUp = async (data) => {
         const index = taskContext.state.tasks.findIndex(i => i.order === task.order);
-        if (data.absY < 40) {
+        if (isExpanded) {
+            return;
+        }
+        if (data.absY < 30) {
             return;
         }
         if (index === 0) {
             return;
         }
+
         const nextIndex = index - 1;
         const above = taskContext.state.tasks[nextIndex];
-        const curr = task;
-        const newArr = JSON.parse(JSON.stringify(taskContext.state.tasks));
-        newArr[nextIndex] = curr;
-        newArr[index] = above;
-        taskContext.dispatch({type: UPDATE, payload: newArr});
+        await updateTask({...task, order: above.order});
+        await updateTask({...above, order: task.order});
+        const fetchedTasks = await fetchTasks(props);
+        taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
 
     };
 
-    const handleSwipeDown = (data) => {
+    const handleSwipeDown = async (data) => {
         const index = taskContext.state.tasks.findIndex(i => i.order === task.order);
-        if (data.absY < 40) {
+        if (isExpanded) {
             return;
         }
-        if (index === taskContext.state.tasks.length -1 ) {
+        if (data.absY < 30) {
             return;
         }
+        if (index === taskContext.state.tasks.length - 1 ) {
+            return;
+        }
+
         const nextIndex = index + 1;
         const below = taskContext.state.tasks[nextIndex];
-        const curr = task;
-        const newArr = JSON.parse(JSON.stringify(taskContext.state.tasks));
-        newArr[nextIndex] = curr;
-        newArr[index] = below;
-        taskContext.dispatch({type: UPDATE, payload: newArr});
+        await updateTask({...task, order: below.order});
+        await updateTask({...below, order: task.order});
+        const fetchedTasks = await fetchTasks(props);
+        taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
+
     };
 
     const taskClassName = () => {

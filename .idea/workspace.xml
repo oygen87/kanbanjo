@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="340853b4-e068-4acb-85c9-35eaf346a8ca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Kanban.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Kanban.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Task.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Task.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/TaskContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/TaskContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util/Util.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Util.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Views/TaskList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/TaskList.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,7 +29,7 @@
           <entry key="css" value="6" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="4" />
-          <entry key="js" value="137" />
+          <entry key="js" value="140" />
           <entry key="json" value="7" />
           <entry key="md" value="2" />
           <entry key="png" value="1" />
@@ -38,7 +42,7 @@
           <entry key="HTML" value="4" />
           <entry key="Image" value="1" />
           <entry key="JSON" value="7" />
-          <entry key="JavaScript" value="137" />
+          <entry key="JavaScript" value="140" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="TypeScript" value="1" />
@@ -54,7 +58,7 @@
         <counts>
           <entry key="css" value="1428" />
           <entry key="html" value="15" />
-          <entry key="js" value="20545" />
+          <entry key="js" value="21225" />
           <entry key="json" value="68" />
         </counts>
       </usages-collector>
@@ -63,7 +67,7 @@
           <entry key="CSS" value="1428" />
           <entry key="HTML" value="15" />
           <entry key="JSON" value="68" />
-          <entry key="JavaScript" value="20545" />
+          <entry key="JavaScript" value="21225" />
         </counts>
       </usages-collector>
     </session>
@@ -71,19 +75,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pages/NewPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="20" column="68" lean-forward="true" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -91,17 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
+            <state relative-caret-position="722">
               <caret line="38" column="151" selection-start-line="38" selection-start-column="151" selection-end-line="38" selection-end-column="151" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Auth/FirebaseService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="184" column="39" selection-start-line="184" selection-start-column="39" selection-end-line="184" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -109,17 +95,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
+            <state relative-caret-position="292">
               <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Task.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="127" column="51" lean-forward="true" selection-start-line="127" selection-start-column="51" selection-end-line="127" selection-end-column="51" />
+            <state relative-caret-position="152">
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -128,10 +114,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Auth/FirebaseService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="485">
+              <caret line="210" column="83" lean-forward="true" selection-start-line="210" selection-start-column="83" selection-end-line="210" selection-end-column="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Store/TaskContext.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="124">
+              <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Util/Util.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -139,8 +146,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Pages/LoginPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="84" column="14" lean-forward="true" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
+            <state relative-caret-position="798">
+              <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -149,24 +156,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pages/EditPage.js">
+        <entry file="file://$PROJECT_DIR$/src/Views/TaskList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+            <state relative-caret-position="57">
+              <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
               <folding>
-                <element signature="e#0#50#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Views/TaskList.js">
+        <entry file="file://$PROJECT_DIR$/src/Components/Kanban.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+            <state relative-caret-position="304">
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#61#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -206,13 +213,13 @@
       <find>authcontext</find>
       <find>console.log</find>
       <find>trying§</find>
-      <find>task</find>
       <find>&lt;title</find>
       <find>appname</find>
       <find>.standalone</find>
       <find>usestate</find>
       <find>title</find>
       <find>s</find>
+      <find>task</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Eugen\IdeaProjects\google-login-app</dir>
@@ -242,23 +249,23 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/Store/AuthContext.js" />
         <option value="$PROJECT_DIR$/src/Store/ViewContext.js" />
-        <option value="$PROJECT_DIR$/src/Store/TaskContext.js" />
-        <option value="$PROJECT_DIR$/src/Util/Util.js" />
         <option value="$PROJECT_DIR$/src/Components/TopMenu.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/Components/LoginButton.js" />
         <option value="$PROJECT_DIR$/src/Components/BottomMenu.js" />
         <option value="$PROJECT_DIR$/src/Components/LogoutButton.js" />
         <option value="$PROJECT_DIR$/src/Auth/FirebaseService.js" />
-        <option value="$PROJECT_DIR$/src/Components/Kanban.js" />
         <option value="$PROJECT_DIR$/public/manifest.json" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/pwacompat.js" />
-        <option value="$PROJECT_DIR$/src/Pages/LoginPage.js" />
         <option value="$PROJECT_DIR$/src/Pages/EditPage.js" />
         <option value="$PROJECT_DIR$/src/Pages/NewPage.js" />
-        <option value="$PROJECT_DIR$/src/Views/TaskList.js" />
+        <option value="$PROJECT_DIR$/src/Pages/LoginPage.js" />
+        <option value="$PROJECT_DIR$/src/Util/Util.js" />
+        <option value="$PROJECT_DIR$/src/Components/Kanban.js" />
         <option value="$PROJECT_DIR$/src/Components/Task.js" />
+        <option value="$PROJECT_DIR$/src/Views/TaskList.js" />
+        <option value="$PROJECT_DIR$/src/Store/TaskContext.js" />
       </list>
     </option>
   </component>
@@ -340,6 +347,12 @@
               <item name="google-login-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="google-login-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="google-login-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="google-login-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -354,7 +367,7 @@
     <property name="SearchEverywhereHistoryKey" value="login&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/LoginPage.js&#10;edit&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/EditPage.js&#10;task.js&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/Task.js&#10;newpage&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/NewPage.js&#10;loginp&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/LoginPage.js&#10;taskli&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Views/TaskList.js&#10;loginpa&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/LoginPage.js&#10;newpa&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/NewPage.js&#10;index.j&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/index.js&#10;index.htm&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/public/index.html&#10;css&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/App.css&#10;topmen&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/TopMenu.js&#10;new&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/NewPage.js&#10;bottom&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/BottomMenu.js&#10;logout&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/LogoutButton.js&#10;manif&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/public/manifest.json&#10;index.js&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/index.js&#10;task&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/Task.js&#10;doing&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/DoingPage.js&#10;donepage&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/DonePage.js&#10;back&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/BackButton.js&#10;index.ht&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/public/index.html&#10;newt&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Views/NewTask.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558723977985" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558731240683" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="C:\Users\Eugen\IdeaProjects\google-login-app\node_modules\eslint" />
@@ -399,7 +412,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87686000" />
+    <option name="totallyTimeSpent" value="92616000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -411,11 +424,11 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="npm" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.16257995" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.16257995" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49946696" visible="true" weight="0.19522777" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49946696" visible="true" weight="0.19522777" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50053304" side_tool="true" weight="0.335141" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.329718" />
@@ -588,56 +601,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Kanban.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Util/Util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/kanban513.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pages/LoginPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="84" column="14" lean-forward="true" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/TaskContext.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pwacompat.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -646,24 +611,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="38" column="151" selection-start-line="38" selection-start-column="151" selection-end-line="38" selection-end-column="151" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Auth/FirebaseService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="184" column="39" selection-start-line="184" selection-start-column="39" selection-end-line="184" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Pages/EditPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
@@ -672,27 +623,92 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Pages/NewPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="68" lean-forward="true" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+        <state relative-caret-position="-57">
+          <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Views/TaskList.js">
+    <entry file="file://$PROJECT_DIR$/public/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="151" selection-start-line="38" selection-start-column="151" selection-end-line="38" selection-end-column="151" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Auth/FirebaseService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="210" column="83" lean-forward="true" selection-start-line="210" selection-start-column="83" selection-end-line="210" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Util/Util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pages/LoginPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Kanban.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Task.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="127" column="51" lean-forward="true" selection-start-line="127" selection-start-column="51" selection-end-line="127" selection-end-column="51" />
+        <state relative-caret-position="152">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Views/TaskList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/TaskContext.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

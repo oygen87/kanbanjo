@@ -1,4 +1,5 @@
 import React from "react";
+import {sortByOrderProp} from "../Util/Util";
 
 export const UPDATE = "UPDATE";
 export const EDIT = "EDIT";
@@ -10,7 +11,7 @@ const initialState = {tasks: [], edit: {}};
 const taskReducer = (state, action) => {
     switch (action.type) {
         case UPDATE:
-            return { ...state, tasks: action.payload};
+            return { ...state, tasks: action.payload.sort(sortByOrderProp)};
             break;
         case EDIT:
             return { ...state, edit: action.payload};

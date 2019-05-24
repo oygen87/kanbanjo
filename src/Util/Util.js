@@ -12,3 +12,7 @@ export const bgColor = (color) => {
             return "";
     }
 };
+
+export const sortByOrderProp = (a, b) => {
+    return b.order < a.order ?  -1 : b.order > a.order ? 1 : 0;
+};
