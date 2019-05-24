@@ -10,12 +10,13 @@ const NewPage = (props) => {
     const [isValid, setValid] = useState(true);
 
     const [state, setState] = useState({title: null, description: null, status: TODO, color:"green"});
+
     const createTask = async () => {
         if (!state.title || !state.description) {
             setValid(false);
             return;
         }
-        await createNewTask(state);
+        await createNewTask({...state, order: Date.now()});
         const fetchedTasks = await fetchTasks(props);
         taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
         props.history.push({pathname: '/kanban', state: {view: TODO}});

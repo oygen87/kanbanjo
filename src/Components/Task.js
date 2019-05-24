@@ -6,7 +6,7 @@ import { Swipeable } from 'react-swipeable'
 import {fetchTasks, updateTask} from "../Auth/FirebaseService";
 import {bgColor} from "../Util/Util";
 
-const Task = ({props, id, title, description, status, color}) => {
+const Task = ({props, id, title, description, status, color, order}) => {
     const taskContext = useContext(TaskContext);
 
     const [isExpanded, setExpanded] = useState(false);
@@ -14,7 +14,7 @@ const Task = ({props, id, title, description, status, color}) => {
     const [hasSwipedRight, setSwipedRight] = useState(false);
 
     const handleEdit = async () => {
-        taskContext.dispatch({type: EDIT, payload: {id, title, description, status, color}});
+        taskContext.dispatch({type: EDIT, payload: {id, title, description, status, color, order}});
         props.history.push('/edit');
     };
 
@@ -77,6 +77,41 @@ const Task = ({props, id, title, description, status, color}) => {
         }
     };
 
+    const handleSwipeUp = async (data) => {
+        const index = taskContext.state.tasks.findIndex(i => i.order === order);
+        if (data.absY < 40) {
+            return;
+        }
+        if (index === 0) {
+            return;
+        }
+        const nextIndex = index - 1;
+        const above = taskContext.state.tasks[nextIndex];
+        const curr = {id, title, description, status, color, order};
+        const newArr = JSON.parse(JSON.stringify(taskContext.state.tasks));
+        newArr[nextIndex] = curr;
+        newArr[index] = above;
+        taskContext.dispatch({type: UPDATE, payload: newArr});
+
+    };
+
+    const handleSwipeDown = (data) => {
+        const index = taskContext.state.tasks.findIndex(i => i.order === order);
+        if (data.absY < 40) {
+            return;
+        }
+        if (index === taskContext.state.tasks.length -1 ) {
+            return;
+        }
+        const nextIndex = index + 1;
+        const below = taskContext.state.tasks[nextIndex];
+        const curr = {id, title, description, status, color, order};
+        const newArr = JSON.parse(JSON.stringify(taskContext.state.tasks));
+        newArr[nextIndex] = curr;
+        newArr[index] = below;
+        taskContext.dispatch({type: UPDATE, payload: newArr});
+    };
+
     const taskClassName = () => {
         let className = bgColor(color) + " card mt-2 p-3 task ";
         if (hasSwipedLeft) {
@@ -89,7 +124,10 @@ const Task = ({props, id, title, description, status, color}) => {
     };
 
     return (
-        <Swipeable onSwipedLeft={handleSwipeLeft} onSwipedRight={handleSwipeRight}>
+        <Swipeable onSwipedLeft={handleSwipeLeft}
+                   onSwipedRight={handleSwipeRight}
+                   onSwipedDown={handleSwipeDown}
+                   onSwipedUp={handleSwipeUp}>
             <div className={taskClassName()} id={id}>
                 <strong onClick={handleExpand}>{title}</strong>
                 <p className={isExpanded ? "visible" : "d-none"} dangerouslySetInnerHTML={getRawMarkup()} />
