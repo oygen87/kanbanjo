@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="340853b4-e068-4acb-85c9-35eaf346a8ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Task.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Task.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/NewPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/NewPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Views/TaskList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/TaskList.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -56,7 +54,7 @@
         <counts>
           <entry key="css" value="1428" />
           <entry key="html" value="15" />
-          <entry key="js" value="20413" />
+          <entry key="js" value="20545" />
           <entry key="json" value="68" />
         </counts>
       </usages-collector>
@@ -65,7 +63,7 @@
           <entry key="CSS" value="1428" />
           <entry key="HTML" value="15" />
           <entry key="JSON" value="68" />
-          <entry key="JavaScript" value="20413" />
+          <entry key="JavaScript" value="20545" />
         </counts>
       </usages-collector>
     </session>
@@ -120,8 +118,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/Task.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="129" column="45" selection-start-line="129" selection-start-column="45" selection-end-line="129" selection-end-column="45" />
+            <state relative-caret-position="361">
+              <caret line="127" column="51" lean-forward="true" selection-start-line="127" selection-start-column="51" selection-end-line="127" selection-end-column="51" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -165,8 +163,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Views/TaskList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
+            <state relative-caret-position="209">
+              <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -356,7 +354,7 @@
     <property name="SearchEverywhereHistoryKey" value="login&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/LoginPage.js&#10;edit&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/EditPage.js&#10;task.js&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/Task.js&#10;newpage&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/NewPage.js&#10;loginp&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/LoginPage.js&#10;taskli&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Views/TaskList.js&#10;loginpa&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/LoginPage.js&#10;newpa&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/NewPage.js&#10;index.j&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/index.js&#10;index.htm&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/public/index.html&#10;css&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/App.css&#10;topmen&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/TopMenu.js&#10;new&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/NewPage.js&#10;bottom&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/BottomMenu.js&#10;logout&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/LogoutButton.js&#10;manif&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/public/manifest.json&#10;index.js&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/index.js&#10;task&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/Task.js&#10;doing&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/DoingPage.js&#10;donepage&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Pages/DonePage.js&#10;back&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Components/BackButton.js&#10;index.ht&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/public/index.html&#10;newt&#9;FILE&#9;file://C:/Users/Eugen/IdeaProjects/google-login-app/src/Views/NewTask.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558723652601" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558723977985" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="C:\Users\Eugen\IdeaProjects\google-login-app\node_modules\eslint" />
@@ -401,7 +399,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87416000" />
+    <option name="totallyTimeSpent" value="87686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -413,11 +411,11 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="npm" order="5" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.16257995" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.16257995" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49946696" visible="true" weight="0.19522777" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49946696" visible="true" weight="0.19522777" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50053304" side_tool="true" weight="0.335141" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.329718" />
@@ -681,8 +679,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Views/TaskList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
+        <state relative-caret-position="209">
+          <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -691,8 +689,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Task.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="129" column="45" selection-start-line="129" selection-start-column="45" selection-end-line="129" selection-end-column="45" />
+        <state relative-caret-position="361">
+          <caret line="127" column="51" lean-forward="true" selection-start-line="127" selection-start-column="51" selection-end-line="127" selection-end-column="51" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>

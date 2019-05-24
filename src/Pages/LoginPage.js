@@ -70,7 +70,7 @@ const LoginPage = (props) => {
 
     setTimeout(() => {
         setWaiting(false);
-    }, 3000);
+    }, 3500);
 
 
 
