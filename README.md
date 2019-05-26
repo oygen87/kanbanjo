@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/33044306-ef21-47c0-92c1-d3ce7b36383f/deploy-status)](https://app.netlify.com/sites/kanbanjo/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
