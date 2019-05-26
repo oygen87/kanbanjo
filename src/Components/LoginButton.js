@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {AuthContext, LOGIN} from "../Store/AuthContext";
-import {fetchTasks, loginWithGitHub, loginWithRedirect} from "../Auth/FirebaseService";
+import {fetchTasks, loginWithRedirect} from "../Auth/FirebaseService";
 import {TaskContext, UPDATE} from "../Store/TaskContext";
 import {TODO} from "../Store/ViewContext";
 

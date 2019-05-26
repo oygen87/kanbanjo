@@ -12,36 +12,29 @@ const Kanban = (props) => {
 
     const [user, setUser] = useState(null);
 
-
-
     useEffect(() => {
         const fetchData = async () => {
             if (!user) {
-                //console.log("reading profile");
                 const user = await readProfile(props);
                 authContext.dispatch({type: LOGIN});
                 setUser(user);
                 const fetchedTasks = await fetchTasks(props);
-                if (!fetchedTasks) {return;}
+                if (!fetchedTasks) {
+                    return;
+                }
                 taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
             }
-            /*console.log(taskContext.state);
-            if (taskContext.state.tasks.length == 0) {
-                console.log("fetching tasks");
-                const fetchedTasks = await fetchTasks(props);
-                console.log(fetchedTasks);
-                taskContext.dispatch({type: UPDATE, payload: fetchedTasks});
-            }*/
         };
         fetchData();
-    },[]);
+    }, []);
 
     return (
         <div>
             <div className="container mt-2">
                 <div className="task-list">
-                    <TopMenu />
-                    {taskContext.state.tasks && <TaskList props={props} list={taskContext.state.tasks.filter(t => t.status === props.location.state.view)}/>}
+                    <TopMenu/>
+                    {taskContext.state.tasks && <TaskList props={props}
+                                                          list={taskContext.state.tasks.filter(t => t.status === props.location.state.view)}/>}
                     <BottomMenu props={props}/>
                 </div>
             </div>
