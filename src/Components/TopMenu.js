@@ -21,13 +21,13 @@ const TopMenu = () => {
                     state: {
                         view: DOING
                     }
-                }} className={isActive===DOING ? "nav-item nav-link top-menu-active" : "nav-item nav-link"}>In Progress</NavLink>
+                }} className={isActive===DOING ? "nav-item nav-link top-menu-active" : "nav-item nav-link"}>Week</NavLink>
                 <NavLink onClick={()=>setActive(DONE)} to={{
                     pathname: '/kanban',
                     state: {
                         view: DONE
                     }
-                }} className={isActive===DONE ? "nav-item nav-link top-menu-active" : "nav-item nav-link"}>Done</NavLink>
+                }} className={isActive===DONE ? "nav-item nav-link top-menu-active" : "nav-item nav-link"}>Other</NavLink>
             </nav>
         </div>
     );

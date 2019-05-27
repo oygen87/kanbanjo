@@ -77,11 +77,11 @@ const EditPage = (props) => {
                     </button>
                     <button type="button"
                             className={state.status === DOING ? "btn btn-light status-active" : "btn btn-light"}
-                            onClick={() => handleChangeStatus(DOING)}>In Progress
+                            onClick={() => handleChangeStatus(DOING)}>Week
                     </button>
                     <button type="button"
                             className={state.status === DONE ? "btn btn-light status-active" : "btn btn-light"}
-                            onClick={() => handleChangeStatus(DONE)}>Done
+                            onClick={() => handleChangeStatus(DONE)}>Other
                     </button>
                 </div>
             </div>
