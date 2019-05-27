@@ -11,7 +11,7 @@ const initialState = {tasks: [], edit: {}};
 const taskReducer = (state, action) => {
     switch (action.type) {
         case UPDATE:
-            return { ...state, tasks: action.payload.sort(sortByOrderProp)};
+            return action.payload ? { ...state, tasks: action.payload.sort(sortByOrderProp)} : [];
             break;
         case EDIT:
             return { ...state, edit: action.payload};
