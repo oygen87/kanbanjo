@@ -47,7 +47,7 @@ export const loginWithRedirect = () => {
         });
         return user;
     }).catch((error) => {
-        // handle error
+        console.log(error);
     });
 };
 
