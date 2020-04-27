@@ -29,7 +29,7 @@ export const loginWithGitHub = () => {
         });
         return user;
     }).catch((error) => {
-        // handle error
+        console.log(error);
     });
 
 };
